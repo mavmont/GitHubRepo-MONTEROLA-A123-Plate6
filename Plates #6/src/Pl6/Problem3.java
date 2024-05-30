@@ -2,7 +2,7 @@ package Pl6;
 
 import java.util.*;
 
-public class Problem3 {
+public class Problem3 { // Write a java program that will determine if a graph has a cycle or not.
     private int numVertices;
     private LinkedList<Integer>[] adjacencyList;
 
@@ -52,7 +52,7 @@ public class Problem3 {
 
     public static void main(String[] args) {
         
-        Problem3 graph1 = new Problem3(5);
+        Problem3 graph1 = new Problem3(5); // Test Case 1
         graph1.addEdge(0, 1);
         graph1.addEdge(0, 2);
         graph1.addEdge(1, 2);
@@ -62,7 +62,7 @@ public class Problem3 {
         System.out.println("Test Case 1:");
         printGraphCycleDetection(graph1);
 
-        Problem3 graph2 = new Problem3(5);
+        Problem3 graph2 = new Problem3(5); // Test Case 2
         graph2.addEdge(0, 1);
         graph2.addEdge(1, 2);
         graph2.addEdge(2, 3);
@@ -70,7 +70,7 @@ public class Problem3 {
         System.out.println("Test Case 2:");
         printGraphCycleDetection(graph2);
 
-        Problem3 graph3 = new Problem3(4);
+        Problem3 graph3 = new Problem3(4); // Test Case 3
         graph3.addEdge(0, 1);
         graph3.addEdge(0, 2);
         graph3.addEdge(0, 3);
@@ -80,7 +80,7 @@ public class Problem3 {
         System.out.println("Test Case 3:");
         printGraphCycleDetection(graph3);
 
-        Problem3 graph4 = new Problem3(6);
+        Problem3 graph4 = new Problem3(6); // Test Case 4
         graph4.addEdge(0, 1);
         graph4.addEdge(1, 2);
         graph4.addEdge(2, 0);
@@ -88,7 +88,7 @@ public class Problem3 {
         System.out.println("Test Case 4:");
         printGraphCycleDetection(graph4);
 
-        Problem3 graph5 = new Problem3(3);
+        Problem3 graph5 = new Problem3(3); // Test Case 5
         System.out.println("Test Case 5:");
         printGraphCycleDetection(graph5);
     }
