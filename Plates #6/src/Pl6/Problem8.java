@@ -53,73 +53,35 @@ public class Problem8 {
     }
 
     public static void main(String[] args) {
-        
-        int[][] graph1a = {
-            {0, 1, 0, 1},
-            {1, 0, 1, 0},
-            {0, 1, 0, 1},
-            {1, 0, 1, 0}
-        };
-        int[][] graph2a = {
-            {0, 1, 1, 0},
-            {1, 0, 0, 1},
-            {1, 0, 0, 1},
-            {0, 1, 1, 0}
-        };
-        Problem8 test1 = new Problem8(graph1a, graph2a);
-        System.out.println("Test Case 1: The graphs are" + (test1.areIsomorphic() ? " isomorphic." : " not isomorphic."));
+        Scanner scanner = new Scanner(System.in);
 
-        int[][] graph1b = {
-            {0, 1, 1},
-            {1, 0, 1},
-            {1, 1, 0}
-        };
-        int[][] graph2b = {
-            {0, 1, 1},
-            {1, 0, 0},
-            {1, 0, 0}
-        };
-        Problem8 test2 = new Problem8(graph1b, graph2b);
-        System.out.println("Test Case 2: The graphs are" + (test2.areIsomorphic() ? " isomorphic." : " not isomorphic."));
+        System.out.print("Enter the number of vertices in the graphs: ");
+        int numVertices = scanner.nextInt();
 
-        int[][] graph1c = {
-            {0, 1, 1},
-            {1, 0, 0},
-            {1, 0, 0}
-        };
-        int[][] graph2c = {
-            {0, 1, 1},
-            {1, 0, 0},
-            {1, 0, 0}
-        };
-        Problem8 test3 = new Problem8(graph1c, graph2c);
-        System.out.println("Test Case 3: The graphs are" + (test3.areIsomorphic() ? " isomorphic." : " not isomorphic."));
+        int[][] graph1 = new int[numVertices][numVertices];
+        int[][] graph2 = new int[numVertices][numVertices];
 
-        int[][] graph1d = {
-            {0, 1},
-            {1, 0}
-        };
-        int[][] graph2d = {
-            {0, 1},
-            {1, 0}
-        };
-        Problem8 test4 = new Problem8(graph1d, graph2d);
-        System.out.println("Test Case 4: The graphs are" + (test4.areIsomorphic() ? " isomorphic." : " not isomorphic."));
+        System.out.println("Enter the adjacency matrix for graph 1:");
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
+                graph1[i][j] = scanner.nextInt();
+            }
+        }
 
-        int[][] graph1e = {
-            {0, 1, 1, 1},
-            {1, 0, 0, 0},
-            {1, 0, 0, 0},
-            {1, 0, 0, 0}
-        };
-        int[][] graph2e = {
-            {0, 1, 1, 1},
-            {1, 0, 0, 0},
-            {1, 0, 0, 0},
-            {1, 0, 0, 0}
-        };
-        Problem8 test5 = new Problem8(graph1e, graph2e);
-        System.out.println("Test Case 5: The graphs are" + (test5.areIsomorphic() ? " isomorphic." : " not isomorphic."));
+        System.out.println("Enter the adjacency matrix for graph 2:");
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
+                graph2[i][j] = scanner.nextInt();
+            }
+        }
+
+        Problem8 problem = new Problem8(graph1, graph2);
+        if (problem.areIsomorphic()) {
+            System.out.println("The graphs are isomorphic.");
+        } else {
+            System.out.println("The graphs are not isomorphic.");
+        }
     }
 }
+
 
