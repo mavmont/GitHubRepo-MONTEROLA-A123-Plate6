@@ -3,7 +3,8 @@ import java.util.*;
 
 import java.util.*;
 
-public class Problem1 {
+public class Problem1 { // Write a java program that receives a list of edges of a simple graph, the program should determine whether it is connected
+                       // and find the number of connected components if it is not connected.
     private int numVertices;
     private LinkedList<Integer>[] adjacencyList;
 
@@ -57,14 +58,14 @@ public class Problem1 {
 
     public static void main(String[] args) {
       
-        Problem1 graph1 = new Problem1(5);
+        Problem1 graph1 = new Problem1(5); //Test Case 1
         graph1.addEdge(0, 1);
         graph1.addEdge(0, 2);
         graph1.addEdge(3, 4);
         System.out.println("Test Case 1:");
         printGraphConnectivity(graph1);
 
-        Problem1 graph2 = new Problem1(4);
+        Problem1 graph2 = new Problem1(4); //Test Case 2
         graph2.addEdge(0, 1);
         graph2.addEdge(0, 2);
         graph2.addEdge(0, 3);
@@ -74,11 +75,11 @@ public class Problem1 {
         System.out.println("Test Case 2:");
         printGraphConnectivity(graph2);
 
-        Problem1 graph3 = new Problem1(3);
+        Problem1 graph3 = new Problem1(3); //Test Case 3
         System.out.println("Test Case 3:");
         printGraphConnectivity(graph3);
 
-        Problem1 graph4 = new Problem1(6);
+        Problem1 graph4 = new Problem1(6); //Test Case 4
         graph4.addEdge(0, 1);
         graph4.addEdge(1, 2);
         graph4.addEdge(2, 3);
@@ -87,7 +88,7 @@ public class Problem1 {
         System.out.println("Test Case 4:");
         printGraphConnectivity(graph4);
 
-        Problem1 graph5 = new Problem1(6);
+        Problem1 graph5 = new Problem1(6); //Test Case 5
         graph5.addEdge(0, 1);
         graph5.addEdge(1, 2);
         graph5.addEdge(3, 4);
