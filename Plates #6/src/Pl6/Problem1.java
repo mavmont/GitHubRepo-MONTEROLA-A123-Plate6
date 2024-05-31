@@ -1,8 +1,7 @@
 package Pl6;
 import java.util.*;
 
-public class Problem1 { // Write a java program that receives a list of edges of a simple graph, the program should determine whether it is connected
-                       // and find the number of connected components if it is not connected.
+public class Problem1 { 
      private int numVertices;
     private LinkedList<Integer>[] adjacencyList;
 
