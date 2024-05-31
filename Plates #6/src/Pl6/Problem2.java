@@ -2,8 +2,7 @@ package Pl6;
 
 import java.util.*;
 
-public class Problem2 { // Write a java program that accepts an adjacency matrix of a graph. The program should list the edges of this graph and give
-                        // the number of times each edge appears.
+public class Problem2 { 
    private int[][] adjacencyMatrix;
     private int numVertices;
 
