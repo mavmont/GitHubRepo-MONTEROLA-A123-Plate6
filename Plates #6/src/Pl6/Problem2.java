@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Problem2 { // Write a java program that accepts an adjacency matrix of a graph. The program should list the edges of this graph and give
                         // the number of times each edge appears.
-    private int[][] adjacencyMatrix;
+   private int[][] adjacencyMatrix;
     private int numVertices;
 
     public Problem2(int[][] adjacencyMatrix) {
@@ -31,64 +31,21 @@ public class Problem2 { // Write a java program that accepts an adjacency matrix
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        int[][] adjacencyMatrix1 = {  // Test Case 1
-            {0, 1, 2, 0},
-            {1, 0, 1, 1},
-            {2, 1, 0, 3},
-            {0, 1, 3, 0}
-        };
-        System.out.println("Test Case 1:");
-        Problem2 graph1 = new Problem2(adjacencyMatrix1);
-        graph1.listEdgesAndCounts();
-        System.out.println();
+        System.out.print("Enter number of vertices: ");
+        int numVertices = scanner.nextInt();
 
-        int[][] adjacencyMatrix2 = { // Test Case 2
-            {0, 1, 1, 1},
-            {1, 0, 1, 1},
-            {1, 1, 0, 1},
-            {1, 1, 1, 0}
-        };
-        System.out.println("Test Case 2:");
-        Problem2 graph2 = new Problem2(adjacencyMatrix2);
-        graph2.listEdgesAndCounts();
-        System.out.println();
+        int[][] adjacencyMatrix = new int[numVertices][numVertices];
 
-        int[][] adjacencyMatrix3 = { // Test Case 3
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 0, 0, 0}
-        };
-        System.out.println("Test Case 3:");
-        Problem2 graph3 = new Problem2(adjacencyMatrix3);
-        graph3.listEdgesAndCounts();
-        System.out.println();
-        
-        int[][] adjacencyMatrix4 = { // Test Case 4
-            {0, 1, 0, 0},
-            {1, 0, 0, 0},
-            {0, 0, 0, 1},
-            {0, 0, 1, 0}
-        };
-        System.out.println("Test Case 4:");
-        Problem2 graph4 = new Problem2(adjacencyMatrix4);
-        graph4.listEdgesAndCounts();
-        System.out.println();
+        System.out.println("Enter adjacency matrix:");
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
+                adjacencyMatrix[i][j] = scanner.nextInt();
+            }
+        }
 
-        int[][] adjacencyMatrix5 = { // Test Case 5
-            {0, 1, 0, 0, 0, 0},
-            {1, 0, 1, 0, 0, 0},
-            {0, 1, 0, 1, 0, 0},
-            {0, 0, 1, 0, 1, 0},
-            {0, 0, 0, 1, 0, 1},
-            {0, 0, 0, 0, 1, 0}
-        };
-        System.out.println("Test Case 5:");
-        Problem2 graph5 = new Problem2(adjacencyMatrix5);
-        graph5.listEdgesAndCounts();
-        System.out.println();
+        Problem2 graph = new Problem2(adjacencyMatrix);
+        graph.listEdgesAndCounts();
     }
 }
-
-
