@@ -2,7 +2,7 @@ package Pl6;
 
 import java.util.*;
 
-public class Problem3 { // Write a java program that will determine if a graph has a cycle or not.
+public class Problem3 { 
   private int numVertices;
     private LinkedList<Integer>[] adjacencyList;
 
